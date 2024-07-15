@@ -14,6 +14,9 @@ from .models import (
 )
 from django.contrib import messages
 
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
+
 
 def index(request):
     fetchitem = item.objects.all()[0:8]
