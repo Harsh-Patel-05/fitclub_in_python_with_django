@@ -1,165 +1,189 @@
 <html>
 {% load static %}
+
 <head>
-<title>FITZEE | Home</title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Best Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	<title>FITZEE | Home</title>
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Best Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<link href=" {% static 'css/bootstrap.css' %} " rel="stylesheet" type="text/css" media="all" />
-<link href=" {% static 'css/style.css' %} " rel="stylesheet" type="text/css" media="all" />
-<!-- js -->
-<script src=" {% static 'js/jquery.min.js' %} "></script>
-<!-- //js -->
-<!-- cart -->
-<script src=" {% static 'js/simpleCart.min.js' %} "> </script>
-<!-- cart -->
-<link rel="stylesheet" type="text/css" href=" {% static 'css/jquery-ui.css' %} ">
-<!-- for bootstrap working -->
-<script type="text/javascript" src=" {% static 'js/bootstrap-3.1.1.min.js' %} "></script>
-<!-- //for bootstrap working -->
-<link href=' //fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic ' rel='stylesheet' type='text/css'>
-<link href=' //fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic ' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href=" {% static 'css/rate.css' %} " />
+	<!-- //for-mobile-apps -->
+	<link href=" {% static 'css/bootstrap.css' %} " rel="stylesheet" type="text/css" media="all" />
+	<link href=" {% static 'css/style.css' %} " rel="stylesheet" type="text/css" media="all" />
+	<!-- js -->
+	<script src=" {% static 'js/jquery.min.js' %} "></script>
+	<!-- //js -->
+	<!-- cart -->
+	<script src=" {% static 'js/simpleCart.min.js' %} "> </script>
+	<!-- cart -->
+	<link rel="stylesheet" type="text/css" href=" {% static 'css/jquery-ui.css' %} ">
+	<!-- for bootstrap working -->
+	<script type="text/javascript" src=" {% static 'js/bootstrap-3.1.1.min.js' %} "></script>
+	<!-- //for bootstrap working -->
+	<link
+		href=' //fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic '
+		rel='stylesheet' type='text/css'>
+	<link
+		href=' //fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic '
+		rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href=" {% static 'css/rate.css' %} " />
 	<!-- animation-effect -->
-<link href=" {% static 'css/animate.min.css' %} " rel="stylesheet"> 
-<script src=" {% static 'js/wow.min.js' %} "></script>
-<script>
- new WOW().init();
-</script>
-<!-- //animation-effect -->
+	<link href=" {% static 'css/animate.min.css' %} " rel="stylesheet">
+	<script src=" {% static 'js/wow.min.js' %} "></script>
+	<script>
+		new WOW().init();
+	</script>
+	<!-- //animation-effect -->
 </head>
+
 <body>
-{% if messages %}
+	{% if messages %}
 	{% for msg in messages %}
-<script>
-	alert('{{ msg }}');
-</script>
+	<script>
+		alert('{{ msg }}');
+	</script>
 	{% endfor %}
-{% endif %}
-<!-- header -->
-<div class="header">
-	<div class="container">
-		<div class="header-grid">
-			<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
-				<ul>
-					<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href=" {% static 'mailto:info@example.com' %} ">fitzeeforhealth@gmail.com</a></li>
-					<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 1234567890</li>
-					{% if request.session.log_user %}
-					<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href=" {% url 'logout' %} ">logout</a></li>
-					{% else %}
-					<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href=" {% url 'login.html' %} ">Login</a></li>
-					<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href=" {% url 'register.html' %} ">Register</a></li>
-					{% endif %}
-				</ul>
-			</div>
-			<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
-				<ul class="social-icons">
-					<li><a href="https://www.facebook.com/profile.php?id=100078447043673"><img src=" {% static 'images/face.png' %} "></a>
-						<a href="https://twitter.com/FitzeeH?t=FeZig36XOoYim0RNfjdv6Q&s=03"><img src=" {% static 'images/twitter.png' %} " height="38px" width="38px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="https://www.instagram.com/fitzee_forhealth/"><img src=" {% static 'images/instagram.png' %} " height="38px" width="38px"></a>
-					</li>	
-				</ul>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-		<div class="logo-nav">
-			<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-				<h1><a href=" {% url 'index.html' %} ">&nbsp;FITZEE <span>Stay Healthy</span></a></h1>
-			</div>
-			<div class="logo-nav-left1">
-				<nav class="navbar navbar-default">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header nav_2">
-					<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div> 
-				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href=" {% url 'index.html' %} " class="act" style="color:white">HOME</a></li>
-						<!-- Mega Menu -->
+	{% endif %}
+	<!-- header -->
+	<div class="header">
+		<div class="container">
+			<div class="header-grid">
+				<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
+					<ul>
+						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a
+								href=" {% static 'mailto:info@example.com' %} ">fitzeeforhealth@gmail.com</a></li>
+						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 1234567890</li>
 						{% if request.session.log_user %}
-						<li class="active">
-							<a href=" {% url 'exercise.html' %} " style="color:white">EXERCISE</a>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white">DIET <b class="caret"></b></a>
-							<ul class="dropdown-menu multi-column columns-2">
-								<div class="row">
-									<div class="col-sm-6">
-										<ul class="multi-column-dropdown">
-											<h6>vegetarian</h6>
-											<li><a href="/vwg"><b>WEIGHT GAIN</b></a></li>
-											<li><a href="/vwl"><b>WEIGHT LOOSE</b></a></li>
-										</ul>
-									</div>
-									<div class="col-sm-6">
-										<ul class="multi-column-dropdown">
-											<h6>non-vegetarian</h6>
-											<li><a href="/nwg"><b>WEIGHT GAIN</b></a></li>
-											<li><a href="/nwl"><b>WEIGHT LOOSE</b></a></li>
-										</ul>
-									</div>
-								</div>
-							</ul>
-						</li>
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a
+								href=" {% url 'logout' %} ">logout</a></li>
+						{% else %}
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a
+								href=" {% url 'login.html' %} ">Login</a></li>
+						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a
+								href=" {% url 'register.html' %} ">Register</a></li>
 						{% endif %}
-						<li><a href=" {% url 'blog.html' %} " style="color:white">BLOG</a></li>
-						<li><a href=" {% url 'products.html' %} " style="color:white">PRODUCTS</a></li>
-						<li><a href=" {% url 'mail.html' %} " style="color:white">CONTACT US</a></li>
 					</ul>
 				</div>
-				</nav>
-			</div>
-			<div class="header-right">
-				<div class="cart box_1">
-					<a href=" {% url 'checkout.html' %} ">
-						<h3> <div class="total">
-							<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-							<img src=" {% static 'images/cr.png' %} " alt=" " height="20px" width="20px">
-						</h3>
-					</a>
-					<p><a href="/checkout" class="simpleCart_empty">Cart</a></p>
-					<div class="clearfix"> </div>
+				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
+					<ul class="social-icons">
+						<li><a href="https://www.facebook.com/profile.php?id=100078447043673"><img
+									src=" {% static 'images/face.png' %} "></a>
+							<a href="https://twitter.com/FitzeeH?t=FeZig36XOoYim0RNfjdv6Q&s=03"><img
+									src=" {% static 'images/twitter.png' %} " height="38px"
+									width="38px"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="https://www.instagram.com/fitzee_forhealth/"><img
+									src=" {% static 'images/instagram.png' %} " height="38px" width="38px"></a>
+						</li>
+					</ul>
 				</div>
+				<div class="clearfix"> </div>
 			</div>
-			<br>
-			<br>
-			<br>
-			<br>
-			<div class="header-right">
-				{% if request.session.log_user %}
-					<h5 style="color:#97ee0c"> Hello,<label style="color:white">{{ request.session.log_user }}</label></h5>
+			<div class="logo-nav">
+				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
+					<h1><a href=" {% url 'index.html' %} ">&nbsp;FITZEE <span>Stay Healthy</span></a></h1>
+				</div>
+				<div class="logo-nav-left1">
+					<nav class="navbar navbar-default">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header nav_2">
+							<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse"
+								data-target="#bs-megadropdown-tabs">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href=" {% url 'index.html' %} " class="act"
+										style="color:white">HOME</a></li>
+								<!-- Mega Menu -->
+								{% if request.session.log_user %}
+								<li class="active">
+									<a href=" {% url 'exercise.html' %} " style="color:white">EXERCISE</a>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white">DIET
+										<b class="caret"></b></a>
+									<ul class="dropdown-menu multi-column columns-2">
+										<div class="row">
+											<div class="col-sm-6">
+												<ul class="multi-column-dropdown">
+													<h6>vegetarian</h6>
+													<li><a href="/vwg"><b>WEIGHT GAIN</b></a></li>
+													<li><a href="/vwl"><b>WEIGHT LOOSE</b></a></li>
+												</ul>
+											</div>
+											<div class="col-sm-6">
+												<ul class="multi-column-dropdown">
+													<h6>non-vegetarian</h6>
+													<li><a href="/nwg"><b>WEIGHT GAIN</b></a></li>
+													<li><a href="/nwl"><b>WEIGHT LOOSE</b></a></li>
+												</ul>
+											</div>
+										</div>
+									</ul>
+								</li>
+								{% endif %}
+								<li><a href=" {% url 'blog.html' %} " style="color:white">BLOG</a></li>
+								<li><a href=" {% url 'products.html' %} " style="color:white">PRODUCTS</a></li>
+								<li><a href=" {% url 'mail.html' %} " style="color:white">CONTACT US</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<div class="header-right">
+					<div class="cart box_1">
+						<a href=" {% url 'checkout.html' %} ">
+							<h3>
+								<div class="total">
+									<span class="simpleCart_total"></span> (<span id="simpleCart_quantity"
+										class="simpleCart_quantity"></span> items)
+								</div>
+								<img src=" {% static 'images/cr.png' %} " alt=" " height="20px" width="20px">
+							</h3>
+						</a>
+						<p><a href="/checkout" class="simpleCart_empty">Cart</a></p>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<div class="header-right">
+					{% if request.session.log_user %}
+					<h5 style="color:#97ee0c"> Hello,<label style="color:white">{{ request.session.log_user }}</label>
+					</h5>
 					<div class="clearfix"> </div>
-				{% endif %}
+					{% endif %}
+				</div>
+				<div class="clearfix"> </div>
 			</div>
-			<div class="clearfix"> </div>
 		</div>
 	</div>
-</div>
-<!-- //header -->
-{% block content %} {% endblock %}
-<!-- footer -->
+	<!-- //header -->
+	{% block content %} {% endblock %}
+	<!-- footer -->
 	<div class="footer">
 		<div class="container">
 			<div class="footer-grids">
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
 					<h3 style="color: #97ee0c;">About Us</h3>
-					<p>We want to help you live a fit and healthy lifestyle! <span>We helped over 5000 customers live longer,happier and healthier lives.</span> </p>
+					<p>We want to help you live a fit and healthy lifestyle! <span>We helped over 5000 customers live
+							longer,happier and healthier lives.</span> </p>
 				</div>
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
 					<h3 style="color: #97ee0c;">Contact Info</h3>
 					<ul>
-						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>Ahmedabad City.</span></li>
-						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href=" {% static 'mailto:info@example.com' %} ">fitzeeforhealth@gmail.com</a></li>
+						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block,
+							<span>Ahmedabad City.</span></li>
+						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a
+								href=" {% static 'mailto:info@example.com' %} ">fitzeeforhealth@gmail.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 1234567890</li>
 					</ul>
 				</div>
@@ -177,84 +201,93 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
 					<h3 style="color: #97ee0c;">Connect</h3>
 					<ul>
-						<li><a href="https://www.facebook.com/profile.php?id=100078447043673"><img src=" {% static 'images/face.png' %} "></a>
-							<a href="https://twitter.com/FitzeeH?t=FeZig36XOoYim0RNfjdv6Q&s=03"><img src=" {% static 'images/twitter.png' %} " height="38px" width="38px"></a> &nbsp;
-							<a href="https://www.instagram.com/fitzee_forhealth/"><img src=" {% static 'images/instagram.png' %} " height="38px" width="38px"></a>
+						<li><a href="https://www.facebook.com/profile.php?id=100078447043673"><img
+									src=" {% static 'images/face.png' %} "></a>
+							<a href="https://twitter.com/FitzeeH?t=FeZig36XOoYim0RNfjdv6Q&s=03"><img
+									src=" {% static 'images/twitter.png' %} " height="38px" width="38px"></a> &nbsp;
+							<a href="https://www.instagram.com/fitzee_forhealth/"><img
+									src=" {% static 'images/instagram.png' %} " height="38px" width="38px"></a>
 						</li>
 					</ul>
 					<h3 style="color: #97ee0c;">Sign Up</h3>
-                    <ul>
-                        <li>
-                            <a href=" ">Login / </a>
-                            <a href=" ">Register</a>
-                        </li>
-                    </ul>
-						<div class="clearfix"> </div>
+					<ul>
+						<li>
+							<a href=" ">Login / </a>
+							<a href=" ">Register</a>
+						</li>
+					</ul>
+					<div class="clearfix"> </div>
 					<br>
 				</div>
 				<div class="clearfix"> </div>
 				<br>
 				<br>
 				<style>
-					textarea{
-						outline:none;
-						background:#f5f5f5;
-						border:1px solid #D2D2D2;
-						font-size:15px;
-						color:#212121;
+					textarea {
+						outline: none;
+						background: #f5f5f5;
+						border: 1px solid #D2D2D2;
+						font-size: 15px;
+						color: #212121;
 					}
-					input[type="submit"]{
-						outline:none;
-						padding:10px 0;
-						background:#97ee0c;
-						border:none;
-						width:30%;
-						font-size:1em;
-						color:#fff;
+
+					input[type="submit"] {
+						outline: none;
+						padding: 10px 0;
+						background: #97ee0c;
+						border: none;
+						width: 30%;
+						font-size: 1em;
+						color: #fff;
 						align-items: center;
-					}					
+					}
 				</style>
 				<!--<div  class="rating" > -->
 				{% if request.session.log_user %}
-					<div class="animated wow slideInLeft" data-wow-delay=".5s">
-						<form style="border: 1px solid white;width: 100%; color: white; animated wow slideInLeft" data-wow-delay=".5s" action="/insertfeedback" method="post">
-							{% csrf_token %}
-							<h3 style="text-align: center;color:#97ee0c;padding: 1%;">FEEDBACK FORM</h3>
-							<br>
+				<div class="animated wow slideInLeft" data-wow-delay=".5s">
+					<form style="border: 1px solid white;width: 100%; color: white; animated wow slideInLeft"
+						data-wow-delay=".5s" action="/insertfeedback" method="post">
+						{% csrf_token %}
+						<h3 style="text-align: center;color:#97ee0c;padding: 1%;">FEEDBACK FORM</h3>
+						<br>
 
-							<label style="margin-left: 1%;">Review:</label><br/>
-							<div class="rating">
-								<input id="star5" name="star" type="radio" value="5" class="radio-btn hide"  />
-								<label for="star5">☆</label>
-								<input id="star4" name="star" type="radio" value="4" class="radio-btn hide" />
-								<label for="star4">☆</label>
-								<input id="star3" name="star" type="radio" value="3" class="radio-btn hide" />
-								<label for="star3">☆</label>
-								<input id="star2" name="star" type="radio" value="2" class="radio-btn hide" />
-								<label for="star2">☆</label>
-								<input id="star1" name="star" type="radio" value="1" class="radio-btn hide" />
-								<label for="star1">☆</label>
-								<div class="clear"></div>
-							</div>
-							<br/>
-							<br/>
-							<br/>
-							<label style="margin-left: 1%;">Comment:</label>
-							<textarea type="text" placeholder="Write Comment Here" name="comment" style="margin-left: 1%; width:98%;padding: 1%;min-height:150px; color:black" required=""></textarea>
-							<br><br>
-							<input type="submit" value="Submit" style="margin-left: 1%;padding: 1%;text-align: center;margin-bottom: 1%;" >
-						</form>
-					</div>
+						<label style="margin-left: 1%;">Review:</label><br />
+						<div class="rating">
+							<input id="star5" name="star" type="radio" value="5" class="radio-btn hide" />
+							<label for="star5">☆</label>
+							<input id="star4" name="star" type="radio" value="4" class="radio-btn hide" />
+							<label for="star4">☆</label>
+							<input id="star3" name="star" type="radio" value="3" class="radio-btn hide" />
+							<label for="star3">☆</label>
+							<input id="star2" name="star" type="radio" value="2" class="radio-btn hide" />
+							<label for="star2">☆</label>
+							<input id="star1" name="star" type="radio" value="1" class="radio-btn hide" />
+							<label for="star1">☆</label>
+							<div class="clear"></div>
+						</div>
+						<br />
+						<br />
+						<br />
+						<label style="margin-left: 1%;">Comment:</label>
+						<textarea type="text" placeholder="Write Comment Here" name="comment"
+							style="margin-left: 1%; width:98%;padding: 1%;min-height:150px; color:black"
+							required=""></textarea>
+						<br><br>
+						<input type="submit" value="Submit"
+							style="margin-left: 1%;padding: 1%;text-align: center;margin-bottom: 1%;">
+					</form>
+				</div>
 				{% endif %}
 			</div>
 			<div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
-				<h2><a href=" {% url 'index.html' %} ">FITZEE <span>S T A Y  H E A L T H Y</span></a></h2>
+				<h2><a href=" {% url 'index.html' %} ">FITZEE <span>S T A Y H E A L T H Y</span></a></h2>
 			</div>
 			<div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
 				<p>&copy 2022 FITZEE. All rights reserved</p>
 			</div>
 		</div>
 	</div>
-<!-- //footer -->
+	<!-- //footer -->
 </body>
+
 </html>
